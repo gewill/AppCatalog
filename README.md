@@ -1,54 +1,157 @@
 # AppCatalog
 
-Shared app names, localized short descriptions, App Store IDs and artwork for gewill apps. A small Swift Package with **no dependencies and no runtime network access**. UI and purchase logic stay in each host app.
+[![Catalog checks](https://github.com/gewill/AppCatalog/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gewill/AppCatalog/actions/workflows/ci.yml)
 
-## Included products
+One place to maintain the app names, short descriptions, App Store IDs and icons used by gewill's **My Apps** recommendations.
 
-| Stable ID | Product | App Store ID | Artwork source |
+AppCatalog is a Swift Package with no external dependencies. Data, images and translations ship inside each app, so displaying recommendations requires no network request. Each host keeps its own interface and decides which products to show.
+
+## Products and languages
+
+| Stable ID | Product | App Store ID | Initial artwork |
 | --- | --- | --- | --- |
-| `iperfman` | iPerfman | `6447375831` | Public v1.6 |
-| `clickman` | Clickman | `6449612559` | Public v1.3.4; transparent padding cropped |
-| `secret-diary` | Secret Diary | `6445909382` | Public v2.0.1 |
+| `iperfman` | [iPerfman](https://apps.apple.com/app/id6447375831) | `6447375831` | Public v1.6 |
+| `clickman` | [Clickman](https://apps.apple.com/app/id6449612559) | `6449612559` | Public v1.3.4; transparent padding cropped |
+| `secret-diary` | [Secret Diary](https://apps.apple.com/app/id6445909382) | `6445909382` | Public v2.0.1 |
 
-Initial artwork was verified on 2026-10-02 in [Pingman PR #133](https://github.com/gewill/Pingman/pull/133). The 22 existing descriptions are carried over from Pingman, not a new translation review. English, Arabic, Danish, German, Spanish, Finnish, French, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese, Russian, Swedish, Thai, Turkish, Simplified Chinese and Traditional Chinese are included.
+Names and descriptions cover **22 locales**: `en`, `ar`, `da`, `de`, `es`, `fi`, `fr`, `hi`, `id`, `it`, `ja`, `ko`, `nb`, `nl`, `pl`, `pt`, `ru`, `sv`, `th`, `tr`, `zh-Hans` and `zh-Hant`.
 
-The catalog is deliberately curated. Adding a record does not add it to every app. For example, Clickman is a Mac product; hosts decide whether to show it on other devices. iPerfman Pro (`6444657542`) is a distinct product and must not be conflated with the included iPerfman ID.
+Initial artwork was checked on **2026-10-02** in [Pingman PR #133](https://github.com/gewill/Pingman/pull/133). Descriptions preserve Pingman's existing translations; this migration was not a new linguistic review. [catalog.json](catalog.json) records each image's source URL, version, retrieval date, transform and SHA-256.
 
-## Use from an app
+Adding a product here does **not** automatically add a row to any app. Clickman is a Mac product; hosts decide where to recommend it. iPerfman Pro (`6444657542`) is a separate App Store product, not the included `iperfman` record.
 
-Add `https://github.com/gewill/AppCatalog.git` in Xcode, select the `AppCatalog` library for each consuming target and pin an approved commit revision. Commit `Package.resolved`. After the first reviewed release, a version requirement can be used instead; no version tags are published yet.
+## Shared data, local presentation
+
+| AppCatalog owns | The host app owns |
+| --- | --- |
+| Stable product IDs and App Store IDs | Selection, order, self-exclusion and platform eligibility |
+| Names and localized descriptions | Language preference and general UI labels |
+| Bundled icons and provenance | Layout, image size, clipping and accessibility |
+| Encoded App Store URLs | Attribution, opening links, Pro visibility and navigation |
+
+The package provides no recommendation screen, runtime metadata fetching, analytics or purchase logic.
+
+## Requirements
+
+- Swift tools **5.9+**.
+- Declared deployment minimums: **iOS/iPadOS 15**, **macOS 12**, **tvOS 15**. Mac Catalyst uses the iOS minimum. These are compatibility declarations, not a claim that every platform has been visually tested.
+- Xcode compiles the image asset catalog; command-line SwiftPM tests do not establish rendered-icon correctness.
+- Maintainers need **Python 3.9+**, with no third-party packages. Consuming apps need neither Python nor a generation build phase.
+
+## Add the package
+
+In Xcode, add the URL below and link the **AppCatalog** product to every consuming target:
+
+```text
+https://github.com/gewill/AppCatalog.git
+```
+
+Select **Commit** and pin the initial implementation merged in [PR #2](https://github.com/gewill/AppCatalog/pull/2):
+
+```text
+5c94b45666301a571e1c166603ad5be0774ffdc6
+```
+
+Commit both the project change and `Package.resolved`. No version tags exist as of 2026-10-02; use a reviewed revision rather than a nonexistent version or a moving branch.
+
+For a SwiftPM host, add these entries to its `Package.swift`:
+
+```swift
+// In dependencies:
+.package(
+    url: "https://github.com/gewill/AppCatalog.git",
+    revision: "5c94b45666301a571e1c166603ad5be0774ffdc6"
+)
+
+// In the consuming target's dependencies:
+.product(name: "AppCatalog", package: "appcatalog")
+```
+
+### Load once and select explicitly
+
+```swift
+import AppCatalog
+
+func loadRecommendations() throws -> [CatalogApp] {
+    try AppCatalog.load().select(["iperfman", "clickman", "secret-diary"])
+}
+```
+
+`select` preserves the requested order. An empty selection returns an empty array; unknown or repeated IDs throw. Loading can also fail because of missing, unreadable or invalid resources. Handle these errors using the host's policy; optional recommendations should not prevent its primary function from running.
+
+### Display in SwiftUI
+
+Pass the loaded products to the view rather than loading the catalog in `body`. Adapt this presentation to the host:
 
 ```swift
 import AppCatalog
 import SwiftUI
 
-// Load once, handle an invalid/missing bundle using the host's error policy.
-let apps = try AppCatalog.load().select(["iperfman", "clickman", "secret-diary"])
-// Empty selections are allowed; missing/duplicate IDs throw rather than disappear.
+struct RecommendedApps: View {
+    let apps: [CatalogApp]
 
-// In a SwiftUI view:
-Image(app.iconName, bundle: AppCatalog.resources)
-    .resizable()
-    .frame(width: 80, height: 80)
-    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-Text(LocalizedStringKey(app.name), tableName: "AppCatalog", bundle: AppCatalog.resources)
-Text(LocalizedStringKey(app.subtitle), tableName: "AppCatalog", bundle: AppCatalog.resources)
-Link("App Store", destination: app.storeURL(provider: "117201810", campaign: "MyHostApp"))
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            ForEach(apps) { app in
+                Link(destination: app.storeURL()) {
+                    HStack(spacing: 12) {
+                        Image(app.iconName, bundle: AppCatalog.resources)
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                            .accessibilityHidden(true)
+                        VStack(alignment: .leading) {
+                            Text(LocalizedStringKey(app.name),
+                                 tableName: "AppCatalog", bundle: AppCatalog.resources)
+                                .font(.headline)
+                            Text(LocalizedStringKey(app.subtitle),
+                                 tableName: "AppCatalog", bundle: AppCatalog.resources)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+                .accessibilityElement(children: .combine)
+            }
+        }
+    }
+}
 ```
 
-SwiftUI resolves text using the view's locale. For AppKit or a custom app language selector, find the chosen locale in `AppCatalog.resources.localizations` using a case-insensitive comparison, then look up that actual `.lproj` name and use `localizedString(forKey:value:table:)` with table `AppCatalog`. Native SwiftPM may lowercase locale directory names. Do not keep using `Bundle.main` for these strings or images. Verify fallback and actual language switching in the consumer.
+For attributed links, use `app.storeURL(provider: "117201810", campaign: "MyHostApp")` with the host's own values. Omit the arguments for a plain store URL. `URLComponents` encodes query values; do not pre-encode or manually concatenate them.
 
-Choose IDs and order explicitly; keep self-exclusion, platform eligibility, Pro visibility, attribution and layout local. A host with a fixed palette or carousel must handle its selected list length. Never derive attribution from another app's bundle name.
+### Language and resource lookup
+
+- Names and subtitles are English source keys. Resolve them through `LocalizedStringKey`, table **AppCatalog**, bundle **AppCatalog.resources**. Images use that bundle too; `Bundle.main` does not own these resources.
+- SwiftUI `Text` uses the view's locale. Keep the host's locale environment when users change language.
+- For AppKit/manual lookup, match the requested locale against `AppCatalog.resources.localizations` case-insensitively, open that actual `.lproj` name, and call `localizedString(forKey:value:table:)`. Native SwiftPM may lowercase names such as `zh-hans.lproj`.
+- Manual lookup needs an explicit fallback, for example requested locale → supported language → English. The package does not map `zh_CN` to `zh-Hans` or provide locale negotiation; the host handles mapping and refreshing displayed text.
+
+Verify live language switching, fallback and persistence in each host. A resource lookup test alone does not validate its language selector.
 
 ## Maintain the catalog
 
-`catalog.json` and `icons/` are the source of truth. `Sources/AppCatalog/Resources/` is generated and checked in so consuming apps do not need Python or generation during builds. Localized `.strings` files keep the package usable with SwiftPM CLI and older supported app toolchains; all text is edited in the shared JSON.
+| Location | Purpose | Edit directly? |
+| --- | --- | --- |
+| [catalog.json](catalog.json) | Product records, translations and artwork provenance | Yes |
+| [icons/](icons/) | Normalized PNG/JPEG artwork | Yes |
+| [Sources/AppCatalog/Resources/](Sources/AppCatalog/Resources/) | Generated JSON, asset catalog and localized `.strings` | No |
+| [scripts/catalog.py](scripts/catalog.py) | Offline validation and generation | For tooling changes |
+| [Sources/AppCatalog/AppCatalog.swift](Sources/AppCatalog/AppCatalog.swift) | Public Swift API | For behavior changes |
 
-1. Create an Issue and branch. Verify the exact public App Store product ID; do not substitute an unpublished local icon or merge separate paid/free products.
-2. Update the relevant record and all declared translations. Keep `id` stable when a display name changes. Source-language `name`/`subtitle` are localization keys; colliding keys must have identical translations.
-3. Save the public artwork in `icons/`, recording its URL, public version, retrieval date, original SHA-256, transform and resulting SHA-256. For Clickman, crop to the full alpha bounds `(46, 50, 466, 471)` (420×421), without resizing or dropping the last visible row. Do not automatically apply this crop to a future icon.
-4. Run the checks below. Review the rendered artwork in a representative consumer in light/dark mode whenever pixels or displayed text change.
-5. Commit and push, open a PR and wait for checks/review. After merge, each host updates its pinned revision in its own PR. Installed apps change only when their app update ships.
+Generated resources are committed so consuming apps can build directly. Edit translations in the shared JSON, not in generated `.strings` files or host copies.
+
+1. **Create an Issue and branch.** Verify the public App Store ID; do not substitute unpublished artwork or combine paid/free products.
+2. **Update the canonical data.** Keep `id` stable when names change. Complete every declared locale. Reused source keys must have identical translations.
+3. **Record artwork provenance.** Include the source URL, public version, retrieval date, original SHA-256, transform and final SHA-256. Inspect changed artwork visually.
+4. **Regenerate and validate.** Run the checks below. Include real before/after consumer captures when visible content changes.
+5. **Commit, push and open a PR.** After checks and review, squash-merge to `main`.
+6. **Update consumers separately.** Each host pins the approved merge revision, updates its lockfile and verifies the affected UI in its own PR. Installed apps change only when those app updates ship.
+
+The initial Clickman image uses alpha bounds `(46, 50, 466, 471)`, producing 420×421 pixels without resizing. This transform belongs to that source image; re-evaluate the bounds for future artwork.
+
+## Validation
+
+For catalog, resource or generator changes:
 
 ```sh
 python3 scripts/catalog.py validate
@@ -59,13 +162,30 @@ swift test
 git diff --check
 ```
 
-Validation checks identity, translations, source provenance, file signatures, hashes and path boundaries. The generator refuses output drift in check mode. Swift tests check loading, selection, encoded attribution and localized resource access. Xcode consumer builds and screenshots verify compiled asset catalogs; a SwiftPM command-line test is not visual acceptance.
+`validate` checks IDs, locale coverage, key conflicts, provenance fields, image signatures, hashes and paths. It does not re-query Apple or establish that recorded artwork is still current. `generate --check` is read-only: exit `0` means current, `1` means drift, and `2` means invalid input or an execution error.
 
-## Adoption
+| Change | Validation scope |
+| --- | --- |
+| README-only | Check claims, links and examples; run `git diff --check` |
+| Catalog or artwork | Validate/regenerate, run package tests, inspect affected consumer UI |
+| API, generator or package configuration | Run relevant Python/Swift tests and affected consumer builds |
 
-- [Pingman #138](https://github.com/gewill/Pingman/issues/138): initial integration, preserve the existing three rows and presentation.
-- OpenCCman: compatible active consumer, not migrated yet; retains its own three-language UI and Pro visibility policy.
-- Clickman: existing recommendation code belongs to an older screen; its current AppKit entry needs separate design before enabling recommendations.
-- iPerfman / Secret Diary: no current My Apps entry was found; adding one is outside this repository's initial scope.
+[CI](.github/workflows/ci.yml) runs catalog/package checks on a GitHub-hosted Ubuntu runner and cancels superseded runs. It does not run every app's regression suite. Consumers retain their required checks and release acceptance.
 
-Public repository access is not a license to reuse app branding. Icons, names and product artwork remain the property of their respective owners and are included here for these apps' product links. No credentials, ASC private metadata, pricing claims or analytics are stored here.
+## Integration status
+
+Checked on **2026-10-02**; linked PRs are the source for subsequent changes.
+
+| Project | Status |
+| --- | --- |
+| AppCatalog | [Initial package merged](https://github.com/gewill/AppCatalog/pull/2); no version tag yet |
+| Pingman | [Integration PR #139](https://github.com/gewill/Pingman/pull/139) open. Native Mac build, light/dark and language checks completed; adoption not merged or released |
+| OpenCCman | Existing recommendation UI; not migrated. Pro visibility rules stay in the host |
+| Clickman | Recommendation code belongs to an older screen; its current AppKit interface needs a separate integration decision |
+| iPerfman / Secret Diary | No current My Apps entry found in the initial audit; adding one is separate product work |
+
+## Artwork and privacy
+
+Public repository access does not grant a license to reuse app branding. Names, icons and artwork remain the property of their respective owners and are included for these apps' product links.
+
+No credentials, private App Store Connect metadata, pricing claims or analytics are stored here. See [AGENTS.md](AGENTS.md) for contribution constraints.
