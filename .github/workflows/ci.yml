@@ -1,0 +1,20 @@
+name: Catalog checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: catalog-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  catalog:
+    name: Catalog validation and tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: python3 scripts/catalog.py validate
+      - run: python3 scripts/catalog.py generate --check
+      - run: python3 -m unittest discover -s tests -v
+      - run: swift test

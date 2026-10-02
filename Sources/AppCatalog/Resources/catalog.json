@@ -1,0 +1,351 @@
+{
+  "apps": [
+    {
+      "appStoreID": "6447375831",
+      "icon": {
+        "path": "icons/iperfman.jpg",
+        "sha256": "2e6bafd4f0d4465583563b3de16fd46f566a44b3312cd0533043ac97327eb966"
+      },
+      "id": "iperfman",
+      "localizations": {
+        "ar": {
+          "name": "iPerfman",
+          "subtitle": "اختبار سرعة شبكة iPerf3"
+        },
+        "da": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 Netværkshastighedstest"
+        },
+        "de": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 Netzwerk-Geschwindigkeitstest"
+        },
+        "en": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 Network Speed Test"
+        },
+        "es": {
+          "name": "iPerfman",
+          "subtitle": "Prueba de velocidad de red iPerf3"
+        },
+        "fi": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3-verkkonopeustesti"
+        },
+        "fr": {
+          "name": "iPerfman",
+          "subtitle": "Test de vitesse réseau iPerf3"
+        },
+        "hi": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 नेटवर्क स्पीड टेस्ट"
+        },
+        "id": {
+          "name": "iPerfman",
+          "subtitle": "Tes Kecepatan Jaringan iPerf3"
+        },
+        "it": {
+          "name": "iPerfman",
+          "subtitle": "Test velocità rete iPerf3"
+        },
+        "ja": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 ネットワークスピードテスト"
+        },
+        "ko": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 네트워크 속도 테스트"
+        },
+        "nb": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 nettverkshastighetstest"
+        },
+        "nl": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 netwerksnelheidstest"
+        },
+        "pl": {
+          "name": "iPerfman",
+          "subtitle": "Test prędkości sieci iPerf3"
+        },
+        "pt": {
+          "name": "iPerfman",
+          "subtitle": "Teste de velocidade de rede iPerf3"
+        },
+        "ru": {
+          "name": "iPerfman",
+          "subtitle": "Тест скорости сети iPerf3"
+        },
+        "sv": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 nätverkshastighetstest"
+        },
+        "th": {
+          "name": "iPerfman",
+          "subtitle": "ทดสอบความเร็วเครือข่าย iPerf3"
+        },
+        "tr": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 Ağ Hız Testi"
+        },
+        "zh-Hans": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 网络速度测试"
+        },
+        "zh-Hant": {
+          "name": "iPerfman",
+          "subtitle": "iPerf3 網路速度測試"
+        }
+      },
+      "name": "iPerfman",
+      "source": {
+        "originalSHA256": "2e6bafd4f0d4465583563b3de16fd46f566a44b3312cd0533043ac97327eb966",
+        "retrievedAt": "2026-10-02",
+        "transform": "Original 512x512 JPEG bytes.",
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/72/81/2372814d-a0fc-ec50-ea5f-574e166010af/AppIcon-0-1x_U007epad-0-1-85-220-0.png/512x512bb.jpg",
+        "version": "1.6"
+      },
+      "subtitle": "iPerf3 Network Speed Test"
+    },
+    {
+      "appStoreID": "6449612559",
+      "icon": {
+        "path": "icons/clickman.png",
+        "sha256": "2be60ae6d44be83006cd6a078232111dfeebfe6c40672684a87652ee4c44a905"
+      },
+      "id": "clickman",
+      "localizations": {
+        "ar": {
+          "name": "Clickman",
+          "subtitle": "النقر التلقائي كإعداد"
+        },
+        "da": {
+          "name": "Clickman",
+          "subtitle": "Auto Clicker som konfig"
+        },
+        "de": {
+          "name": "Clickman",
+          "subtitle": "Auto-Klicker als Konfiguration"
+        },
+        "en": {
+          "name": "Clickman",
+          "subtitle": "Auto Clicker as Config"
+        },
+        "es": {
+          "name": "Clickman",
+          "subtitle": "Auto clic como configuración"
+        },
+        "fi": {
+          "name": "Clickman",
+          "subtitle": "Automaattinen napsautus määrityksen mukaan"
+        },
+        "fr": {
+          "name": "Clickman",
+          "subtitle": "Clic automatique configurable"
+        },
+        "hi": {
+          "name": "Clickman",
+          "subtitle": "कॉन्फ़िगरेशन के रूप में ऑटो क्लिकर"
+        },
+        "id": {
+          "name": "Clickman",
+          "subtitle": "Auto Clicker sebagai Konfigurasi"
+        },
+        "it": {
+          "name": "Clickman",
+          "subtitle": "Auto click come configurazione"
+        },
+        "ja": {
+          "name": "Clickman",
+          "subtitle": "設定としての自動クリッカー"
+        },
+        "ko": {
+          "name": "Clickman",
+          "subtitle": "구성으로 자동 클릭"
+        },
+        "nb": {
+          "name": "Clickman",
+          "subtitle": "Auto-klikker som konfigurasjon"
+        },
+        "nl": {
+          "name": "Clickman",
+          "subtitle": "Auto-klikker als configuratie"
+        },
+        "pl": {
+          "name": "Clickman",
+          "subtitle": "Automatyczne klikanie jako konfiguracja"
+        },
+        "pt": {
+          "name": "Clickman",
+          "subtitle": "Auto clique como configuração"
+        },
+        "ru": {
+          "name": "Clickman",
+          "subtitle": "Автокликер как конфигурация"
+        },
+        "sv": {
+          "name": "Clickman",
+          "subtitle": "Autoklick som konfiguration"
+        },
+        "th": {
+          "name": "Clickman",
+          "subtitle": "ตัวคลิกอัตโนมัติตามการตั้งค่า"
+        },
+        "tr": {
+          "name": "Clickman",
+          "subtitle": "Yapılandırma olarak Otomatik Tıklama"
+        },
+        "zh-Hans": {
+          "name": "Clickman",
+          "subtitle": "自动点击配置工具"
+        },
+        "zh-Hant": {
+          "name": "Clickman",
+          "subtitle": "自動點擊配置工具"
+        }
+      },
+      "name": "Clickman",
+      "source": {
+        "originalSHA256": "7bd9f107b4d6acf7c9c56f48dd64443da556eb8d1e41b25916a47a8fbdf5b6ae",
+        "retrievedAt": "2026-10-02",
+        "transform": "Crop transparent alpha bounds [46, 50, 466, 471] to 420x421; no resizing or pixel edits.",
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/22/0c/ab220c0b-a531-886b-6e93-a4ffe99d6aa2/AppIcon-0-85-220-5-0-0-2x-0-0.png/512x512bb.png",
+        "version": "1.3.4"
+      },
+      "subtitle": "Auto Clicker as Config"
+    },
+    {
+      "appStoreID": "6445909382",
+      "icon": {
+        "path": "icons/secret-diary.jpg",
+        "sha256": "72ae345da66020f5d479dacd8d1fc7e6d063b67186c0be16cfdde59014d6a6c9"
+      },
+      "id": "secret-diary",
+      "localizations": {
+        "ar": {
+          "name": "Secret Diary",
+          "subtitle": "مفكره محميه بكلمه مرور"
+        },
+        "da": {
+          "name": "Secret Diary",
+          "subtitle": "Passwordbeskyttet dagbog"
+        },
+        "de": {
+          "name": "Secret Diary",
+          "subtitle": "Passwortgeschütztes Tagebuch"
+        },
+        "en": {
+          "name": "Secret Diary",
+          "subtitle": "Password Protected Diary"
+        },
+        "es": {
+          "name": "Secret Diary",
+          "subtitle": "Diario protegido con contraseña"
+        },
+        "fi": {
+          "name": "Secret Diary",
+          "subtitle": "Salasanalla suojattu päiväkirja"
+        },
+        "fr": {
+          "name": "Secret Diary",
+          "subtitle": "Journal protégé par mot de passe"
+        },
+        "hi": {
+          "name": "Secret Diary",
+          "subtitle": "पासवर्ड सुरक्षित डायरी"
+        },
+        "id": {
+          "name": "Secret Diary",
+          "subtitle": "Buku Harian Dilindungi Kata Sandi"
+        },
+        "it": {
+          "name": "Secret Diary",
+          "subtitle": "Diario protetto da password"
+        },
+        "ja": {
+          "name": "Secret Diary",
+          "subtitle": "パスワード保護されたダイアリー"
+        },
+        "ko": {
+          "name": "Secret Diary",
+          "subtitle": "비밀번호 보호 일기"
+        },
+        "nb": {
+          "name": "Secret Diary",
+          "subtitle": "Passordbeskyttet Dagbok"
+        },
+        "nl": {
+          "name": "Secret Diary",
+          "subtitle": "Wachtwoordbeveiligd Dagboek"
+        },
+        "pl": {
+          "name": "Secret Diary",
+          "subtitle": "Pamiętnik chroniony hasłem"
+        },
+        "pt": {
+          "name": "Secret Diary",
+          "subtitle": "Diário protegido por senha"
+        },
+        "ru": {
+          "name": "Secret Diary",
+          "subtitle": "Дневник с парольной защитой"
+        },
+        "sv": {
+          "name": "Secret Diary",
+          "subtitle": "Lösenordsskyddad Dagbok"
+        },
+        "th": {
+          "name": "Secret Diary",
+          "subtitle": "ไดอารี่ที่ป้องกันด้วยรหัสผ่าน"
+        },
+        "tr": {
+          "name": "Secret Diary",
+          "subtitle": "Parola Korumalı Günlük"
+        },
+        "zh-Hans": {
+          "name": "Secret Diary",
+          "subtitle": "密码保护日记"
+        },
+        "zh-Hant": {
+          "name": "Secret Diary",
+          "subtitle": "密碼保護日記"
+        }
+      },
+      "name": "Secret Diary",
+      "source": {
+        "originalSHA256": "72ae345da66020f5d479dacd8d1fc7e6d063b67186c0be16cfdde59014d6a6c9",
+        "retrievedAt": "2026-10-02",
+        "transform": "Original 512x512 JPEG bytes.",
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/dc/01/efdc010a-9b6d-1dcd-55d7-d011eba208c8/FoldedPage-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+        "version": "2.0.1"
+      },
+      "subtitle": "Password Protected Diary"
+    }
+  ],
+  "locales": [
+    "ar",
+    "da",
+    "de",
+    "en",
+    "es",
+    "fi",
+    "fr",
+    "hi",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "nb",
+    "nl",
+    "pl",
+    "pt",
+    "ru",
+    "sv",
+    "th",
+    "tr",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "schemaVersion": 1,
+  "sourceLanguage": "en"
+}
