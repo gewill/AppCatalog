@@ -36,7 +36,7 @@ Text(LocalizedStringKey(app.subtitle), tableName: "AppCatalog", bundle: AppCatal
 Link("App Store", destination: app.storeURL(provider: "117201810", campaign: "MyHostApp"))
 ```
 
-SwiftUI resolves text using the view's locale. For AppKit or a custom app language selector, look up the chosen `.lproj` bundle under `AppCatalog.resources` and use `localizedString(forKey:value:table:)` with table `AppCatalog`. Do not keep using `Bundle.main` for these strings or images. Verify fallback and actual language switching in the consumer.
+SwiftUI resolves text using the view's locale. For AppKit or a custom app language selector, find the chosen locale in `AppCatalog.resources.localizations` using a case-insensitive comparison, then look up that actual `.lproj` name and use `localizedString(forKey:value:table:)` with table `AppCatalog`. Native SwiftPM may lowercase locale directory names. Do not keep using `Bundle.main` for these strings or images. Verify fallback and actual language switching in the consumer.
 
 Choose IDs and order explicitly; keep self-exclusion, platform eligibility, Pro visibility, attribution and layout local. A host with a fixed palette or carousel must handle its selected list length. Never derive attribution from another app's bundle name.
 

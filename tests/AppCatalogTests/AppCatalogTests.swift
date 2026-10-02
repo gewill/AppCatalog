@@ -26,7 +26,10 @@ final class AppCatalogTests: XCTestCase {
     }
 
     func testChineseResourceLookup() throws {
-        let path = try XCTUnwrap(AppCatalog.resources.path(forResource: "zh-Hans", ofType: "lproj"))
+        let locale = try XCTUnwrap(AppCatalog.resources.localizations.first {
+            $0.caseInsensitiveCompare("zh-Hans") == .orderedSame
+        })
+        let path = try XCTUnwrap(AppCatalog.resources.path(forResource: locale, ofType: "lproj"))
         let bundle = try XCTUnwrap(Bundle(path: path))
         let key = "Password Protected Diary"
         XCTAssertNotEqual(bundle.localizedString(forKey: key, value: nil, table: "AppCatalog"), key)
