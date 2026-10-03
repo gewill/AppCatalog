@@ -123,13 +123,13 @@
       },
       "icon": {
         "path": "icons/iperfman.jpg",
-        "sha256": "2e6bafd4f0d4465583563b3de16fd46f566a44b3312cd0533043ac97327eb966"
+        "sha256": "ec5b5e858b67c66046ce02482173d5de9b8af7d835b145b01523a5bf7e737438"
       },
       "source": {
-        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/72/81/2372814d-a0fc-ec50-ea5f-574e166010af/AppIcon-0-1x_U007epad-0-1-85-220-0.png/512x512bb.jpg",
-        "version": "1.6",
-        "retrievedAt": "2026-10-02",
-        "originalSHA256": "2e6bafd4f0d4465583563b3de16fd46f566a44b3312cd0533043ac97327eb966",
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/53/fb/40/53fb40df-7bfa-92c0-0238-631983122708/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "version": "2.0",
+        "retrievedAt": "2026-10-03",
+        "originalSHA256": "ec5b5e858b67c66046ce02482173d5de9b8af7d835b145b01523a5bf7e737438",
         "transform": "Original 512x512 JPEG bytes."
       }
     },
