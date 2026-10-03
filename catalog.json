@@ -122,15 +122,15 @@
         }
       },
       "icon": {
-        "path": "icons/iperfman.jpg",
-        "sha256": "ec5b5e858b67c66046ce02482173d5de9b8af7d835b145b01523a5bf7e737438"
+        "path": "icons/iperfman.png",
+        "sha256": "aa0eafcf7429b3586641951ba0a9fe934ab3e70abcafff2c8739b508ce687c2c"
       },
       "source": {
-        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/53/fb/40/53fb40df-7bfa-92c0-0238-631983122708/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "url": "https://github.com/gewill/iperfman/blob/9caddd33260a4955804f4d973ac61735bc711b29/iperfman/AppIcon.icon/Assets/01-icon.png",
         "version": "2.0",
         "retrievedAt": "2026-10-03",
-        "originalSHA256": "ec5b5e858b67c66046ce02482173d5de9b8af7d835b145b01523a5bf7e737438",
-        "transform": "Original 512x512 JPEG bytes."
+        "originalSHA256": "aa0eafcf7429b3586641951ba0a9fe934ab3e70abcafff2c8739b508ce687c2c",
+        "transform": "Original 1024x1024 PNG artwork from single-layer AppIcon.icon (glass=false); no resizing, cropping, or system mask."
       }
     },
     {
