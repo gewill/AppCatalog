@@ -8,15 +8,15 @@ AppCatalog is a Swift Package with no external dependencies. Data, images and tr
 
 ## Products and languages
 
-| Stable ID | Product | App Store ID | Initial artwork |
+| Stable ID | Product | App Store ID | Current artwork |
 | --- | --- | --- | --- |
-| `iperfman` | [iPerfman](https://apps.apple.com/app/id6447375831) | `6447375831` | Public v1.6 |
+| `iperfman` | [iPerfman](https://apps.apple.com/app/id6447375831) | `6447375831` | v2.0 original Icon Composer PNG |
 | `clickman` | [Clickman](https://apps.apple.com/app/id6449612559) | `6449612559` | Public v1.3.4; transparent padding cropped |
 | `secret-diary` | [Secret Diary](https://apps.apple.com/app/id6445909382) | `6445909382` | Public v2.0.1 |
 
 Names and descriptions cover **22 locales**: `en`, `ar`, `da`, `de`, `es`, `fi`, `fr`, `hi`, `id`, `it`, `ja`, `ko`, `nb`, `nl`, `pl`, `pt`, `ru`, `sv`, `th`, `tr`, `zh-Hans` and `zh-Hant`.
 
-Initial artwork was checked on **2026-10-02** in [Pingman PR #133](https://github.com/gewill/Pingman/pull/133). Descriptions preserve Pingman's existing translations; this migration was not a new linguistic review. [catalog.json](catalog.json) records each image's source URL, version, retrieval date, transform and SHA-256.
+Initial artwork was checked on **2026-10-02** in [Pingman PR #133](https://github.com/gewill/Pingman/pull/133). iPerfman v2.0 was verified through Apple’s public record on **2026-10-03**; its artwork uses the original 1024×1024 PNG from the single-layer Icon Composer source, without the store rendition’s baked-in outer frame ([Issue #5](https://github.com/gewill/AppCatalog/issues/5)). Descriptions preserve Pingman's existing translations; this migration was not a new linguistic review. [catalog.json](catalog.json) records each image's source URL, version, retrieval date, transform and SHA-256.
 
 Adding a product here does **not** automatically add a row to any app. Clickman is a Mac product; hosts decide where to recommend it. iPerfman Pro (`6444657542`) is a separate App Store product, not the included `iperfman` record.
 
