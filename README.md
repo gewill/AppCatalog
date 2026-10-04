@@ -13,12 +13,27 @@ AppCatalog is a Swift Package with no external dependencies. Data, images and tr
 | `iperfman` | [iPerfman](https://apps.apple.com/app/id6447375831) | `6447375831` | v2.0 original Icon Composer PNG |
 | `clickman` | [Clickman](https://apps.apple.com/app/id6449612559) | `6449612559` | Public v1.3.4; transparent padding cropped |
 | `secret-diary` | [Secret Diary](https://apps.apple.com/app/id6445909382) | `6445909382` | Public v2.0.1 |
+| `pingman` | [Pingman](https://apps.apple.com/app/id6746965846) | `6746965846` | v1.2 original PNG from the shipped asset |
+| `imagepet` | [ImagePet](https://apps.apple.com/app/id6780180225) | `6780180225` | v1.1 original Icon Composer PNG; dark corners are part of the asset |
+| `openccman` | [OpenCCman](https://apps.apple.com/app/id6474449401) | `6474449401` | v2.1 rendered with `ictool` (design generation 26) |
+| `subbill` | [SubBill](https://apps.apple.com/app/id1561803236) | `1561803236` | v2.0 original PNG; dark corners are part of the asset |
+| `relationship` | [Relationship](https://apps.apple.com/app/id1665455216) | `1665455216` | v1.1.4 original PNG |
 
 Names and descriptions cover **22 locales**: `en`, `ar`, `da`, `de`, `es`, `fi`, `fr`, `hi`, `id`, `it`, `ja`, `ko`, `nb`, `nl`, `pl`, `pt`, `ru`, `sv`, `th`, `tr`, `zh-Hans` and `zh-Hant`.
 
 Initial artwork was checked on **2026-10-02** in [Pingman PR #133](https://github.com/gewill/Pingman/pull/133). iPerfman v2.0 was verified through Apple’s public record on **2026-10-03**; its artwork uses the original 1024×1024 PNG from the single-layer Icon Composer source, without the store rendition’s baked-in outer frame ([Issue #5](https://github.com/gewill/AppCatalog/issues/5)). Descriptions preserve Pingman's existing translations; this migration was not a new linguistic review. [catalog.json](catalog.json) records each image's source URL, version, retrieval date, transform and SHA-256.
 
-Adding a product here does **not** automatically add a row to any app. Clickman is a Mac product; hosts decide where to recommend it. iPerfman Pro (`6444657542`) is a separate App Store product, not the included `iperfman` record.
+Pingman, ImagePet, OpenCCman, SubBill and Relationship were added on **2026-10-05** ([Issue #7](https://github.com/gewill/AppCatalog/issues/7)); their public versions were verified through Apple’s public record that day. Their artwork comes from each app’s source at the commit that shipped that version. OpenCCman’s icon is a layered Icon Composer file with no single raster layer, so it is rendered with Icon Composer’s `ictool`; the exact command is recorded in `catalog.json`. The SubBill and ImagePet assets have dark corners outside their rounded rectangles, and Relationship’s artwork is a full-bleed illustration.
+
+Where the new descriptions come from:
+
+- **Pingman and SubBill**: the localized names and subtitles in their App Store metadata. Pingman’s `zh-Hant` subtitle contained a simplified “与” and is corrected here to “與”.
+- **OpenCCman**: its App Store Connect record for `en`, `zh-Hans` and `zh-Hant`.
+- **Relationship**: the taglines on its website for `en`, `zh-Hans` and `zh-Hant`. Its Chinese product names are localized because Chinese is its primary language; every other locale keeps “Relationship”.
+- **ImagePet**: English only; its `zh-Hans` and `zh-Hant` lines are new.
+- **All remaining locales of ImagePet, OpenCCman and Relationship** are new translations prepared for this catalog and have **not** had a native-speaker review.
+
+Adding a product here does **not** automatically add a row to any app. Clickman and ImagePet are Mac products; hosts decide where to recommend them. iPerfman Pro (`6444657542`) is a separate App Store product, not the included `iperfman` record.
 
 ## Shared data, local presentation
 
