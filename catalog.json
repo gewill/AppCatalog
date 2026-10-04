@@ -346,6 +346,541 @@
         "originalSHA256": "72ae345da66020f5d479dacd8d1fc7e6d063b67186c0be16cfdde59014d6a6c9",
         "transform": "Original 512x512 JPEG bytes."
       }
+    },
+    {
+      "id": "pingman",
+      "appStoreID": "6746965846",
+      "name": "Pingman",
+      "subtitle": "Network Diagnostic & Ping Tool",
+      "localizations": {
+        "ar": {
+          "name": "Pingman",
+          "subtitle": "أداة تشخيص الشبكة وPing"
+        },
+        "da": {
+          "name": "Pingman",
+          "subtitle": "Netværksdiagnose & Ping"
+        },
+        "de": {
+          "name": "Pingman",
+          "subtitle": "Netzwerkdiagnose & Ping Tool"
+        },
+        "en": {
+          "name": "Pingman",
+          "subtitle": "Network Diagnostic & Ping Tool"
+        },
+        "es": {
+          "name": "Pingman",
+          "subtitle": "Diagnóstico de Red y Ping"
+        },
+        "fi": {
+          "name": "Pingman",
+          "subtitle": "Verkkodiagnostiikka ja Ping"
+        },
+        "fr": {
+          "name": "Pingman",
+          "subtitle": "Diagnostic réseau & Ping"
+        },
+        "hi": {
+          "name": "Pingman",
+          "subtitle": "नेटवर्क डायग्नोस्टिक और पिंग"
+        },
+        "id": {
+          "name": "Pingman",
+          "subtitle": "Diagnostik Jaringan & Ping"
+        },
+        "it": {
+          "name": "Pingman",
+          "subtitle": "Diagnostica di rete e Ping"
+        },
+        "ja": {
+          "name": "Pingman",
+          "subtitle": "ネットワーク診断＆Pingツール"
+        },
+        "ko": {
+          "name": "Pingman",
+          "subtitle": "네트워크 진단 및 Ping 도구"
+        },
+        "nb": {
+          "name": "Pingman",
+          "subtitle": "Nettverksdiagnose og Ping"
+        },
+        "nl": {
+          "name": "Pingman",
+          "subtitle": "Netwerkdiagnose & Ping Tool"
+        },
+        "pl": {
+          "name": "Pingman",
+          "subtitle": "Diagnostyka sieci i Ping"
+        },
+        "pt": {
+          "name": "Pingman",
+          "subtitle": "Diagnóstico de Rede e Ping"
+        },
+        "ru": {
+          "name": "Pingman",
+          "subtitle": "Диагностика сети и Ping"
+        },
+        "sv": {
+          "name": "Pingman",
+          "subtitle": "Nätverksdiagnos och Ping"
+        },
+        "th": {
+          "name": "Pingman",
+          "subtitle": "ตรวจสอบเครือข่ายและ Ping"
+        },
+        "tr": {
+          "name": "Pingman",
+          "subtitle": "Ağ Tanılama ve Ping Aracı"
+        },
+        "zh-Hans": {
+          "name": "Pingman",
+          "subtitle": "网络诊断与 Ping 工具"
+        },
+        "zh-Hant": {
+          "name": "Pingman",
+          "subtitle": "網路診斷與 Ping 工具"
+        }
+      },
+      "icon": {
+        "path": "icons/pingman.png",
+        "sha256": "b018830d36ac0519dae8597710ecc9d0ab3bd87927d738293990e023f2164416"
+      },
+      "source": {
+        "url": "https://github.com/gewill/Pingman/blob/9f21d4ca824a51623e7a5cc226b9ca75cde50ade/Pingman/Resource/Assets.xcassets/AppIcon.appiconset/generated-image%20(1).png",
+        "version": "1.2",
+        "retrievedAt": "2026-10-05",
+        "originalSHA256": "b018830d36ac0519dae8597710ecc9d0ab3bd87927d738293990e023f2164416",
+        "transform": "Original 1024x1024 PNG from the AppIcon.appiconset shipped in v1.2; no resizing, cropping, or system mask."
+      }
+    },
+    {
+      "id": "imagepet",
+      "appStoreID": "6780180225",
+      "name": "ImagePet",
+      "subtitle": "Local image compression",
+      "localizations": {
+        "ar": {
+          "name": "ImagePet",
+          "subtitle": "ضغط الصور محليًا"
+        },
+        "da": {
+          "name": "ImagePet",
+          "subtitle": "Lokal billedkomprimering"
+        },
+        "de": {
+          "name": "ImagePet",
+          "subtitle": "Lokale Bildkomprimierung"
+        },
+        "en": {
+          "name": "ImagePet",
+          "subtitle": "Local image compression"
+        },
+        "es": {
+          "name": "ImagePet",
+          "subtitle": "Compresión local de imágenes"
+        },
+        "fi": {
+          "name": "ImagePet",
+          "subtitle": "Kuvien pakkaus paikallisesti"
+        },
+        "fr": {
+          "name": "ImagePet",
+          "subtitle": "Compression d’images en local"
+        },
+        "hi": {
+          "name": "ImagePet",
+          "subtitle": "लोकल इमेज कंप्रेशन"
+        },
+        "id": {
+          "name": "ImagePet",
+          "subtitle": "Kompresi gambar lokal"
+        },
+        "it": {
+          "name": "ImagePet",
+          "subtitle": "Compressione locale delle immagini"
+        },
+        "ja": {
+          "name": "ImagePet",
+          "subtitle": "ローカル画像圧縮"
+        },
+        "ko": {
+          "name": "ImagePet",
+          "subtitle": "로컬 이미지 압축"
+        },
+        "nb": {
+          "name": "ImagePet",
+          "subtitle": "Lokal bildekomprimering"
+        },
+        "nl": {
+          "name": "ImagePet",
+          "subtitle": "Lokale beeldcompressie"
+        },
+        "pl": {
+          "name": "ImagePet",
+          "subtitle": "Lokalna kompresja obrazów"
+        },
+        "pt": {
+          "name": "ImagePet",
+          "subtitle": "Compressão local de imagens"
+        },
+        "ru": {
+          "name": "ImagePet",
+          "subtitle": "Локальное сжатие изображений"
+        },
+        "sv": {
+          "name": "ImagePet",
+          "subtitle": "Lokal bildkomprimering"
+        },
+        "th": {
+          "name": "ImagePet",
+          "subtitle": "บีบอัดรูปภาพในเครื่อง"
+        },
+        "tr": {
+          "name": "ImagePet",
+          "subtitle": "Yerel görsel sıkıştırma"
+        },
+        "zh-Hans": {
+          "name": "ImagePet",
+          "subtitle": "本地图片压缩"
+        },
+        "zh-Hant": {
+          "name": "ImagePet",
+          "subtitle": "本機圖片壓縮"
+        }
+      },
+      "icon": {
+        "path": "icons/imagepet.png",
+        "sha256": "e6ac9ddf1340f52cdd48a94e2d105c78d39a2298fbbcdea8499084608d8bc2f8"
+      },
+      "source": {
+        "url": "https://github.com/gewill/ImagePet/blob/aaf7cee56c60b08ab0660f898b9c8255763d351b/Sources/ImagePet/AppIcon.icon/Assets/appicon_512x512%402x.png",
+        "version": "1.1",
+        "retrievedAt": "2026-10-05",
+        "originalSHA256": "e6ac9ddf1340f52cdd48a94e2d105c78d39a2298fbbcdea8499084608d8bc2f8",
+        "transform": "Original 1024x1024 PNG artwork from single-layer AppIcon.icon (glass=false); no resizing, cropping, or system mask. The asset itself has dark corners outside its rounded rectangle."
+      }
+    },
+    {
+      "id": "openccman",
+      "appStoreID": "6474449401",
+      "name": "OpenCCman",
+      "subtitle": "Fast & Easy Chinese Conversion",
+      "localizations": {
+        "ar": {
+          "name": "OpenCCman",
+          "subtitle": "تحويل سريع وسهل للصينية"
+        },
+        "da": {
+          "name": "OpenCCman",
+          "subtitle": "Hurtig og nem kinesisk konvertering"
+        },
+        "de": {
+          "name": "OpenCCman",
+          "subtitle": "Schnelle und einfache Chinesisch-Konvertierung"
+        },
+        "en": {
+          "name": "OpenCCman",
+          "subtitle": "Fast & Easy Chinese Conversion"
+        },
+        "es": {
+          "name": "OpenCCman",
+          "subtitle": "Conversión de chino rápida y sencilla"
+        },
+        "fi": {
+          "name": "OpenCCman",
+          "subtitle": "Nopea ja helppo kiinan muunnos"
+        },
+        "fr": {
+          "name": "OpenCCman",
+          "subtitle": "Conversion du chinois rapide et simple"
+        },
+        "hi": {
+          "name": "OpenCCman",
+          "subtitle": "तेज़ और आसान चीनी रूपांतरण"
+        },
+        "id": {
+          "name": "OpenCCman",
+          "subtitle": "Konversi bahasa Mandarin cepat dan mudah"
+        },
+        "it": {
+          "name": "OpenCCman",
+          "subtitle": "Conversione del cinese rapida e semplice"
+        },
+        "ja": {
+          "name": "OpenCCman",
+          "subtitle": "かんたん高速な中国語変換"
+        },
+        "ko": {
+          "name": "OpenCCman",
+          "subtitle": "빠르고 쉬운 중국어 변환"
+        },
+        "nb": {
+          "name": "OpenCCman",
+          "subtitle": "Rask og enkel kinesisk konvertering"
+        },
+        "nl": {
+          "name": "OpenCCman",
+          "subtitle": "Snel en eenvoudig Chinees converteren"
+        },
+        "pl": {
+          "name": "OpenCCman",
+          "subtitle": "Szybka i prosta konwersja języka chińskiego"
+        },
+        "pt": {
+          "name": "OpenCCman",
+          "subtitle": "Conversão de chinês rápida e fácil"
+        },
+        "ru": {
+          "name": "OpenCCman",
+          "subtitle": "Быстрое и простое преобразование китайского"
+        },
+        "sv": {
+          "name": "OpenCCman",
+          "subtitle": "Snabb och enkel kinesisk konvertering"
+        },
+        "th": {
+          "name": "OpenCCman",
+          "subtitle": "แปลงภาษาจีนอย่างรวดเร็วและง่ายดาย"
+        },
+        "tr": {
+          "name": "OpenCCman",
+          "subtitle": "Hızlı ve kolay Çince dönüştürme"
+        },
+        "zh-Hans": {
+          "name": "OpenCCman",
+          "subtitle": "便捷高效的中文转换工具"
+        },
+        "zh-Hant": {
+          "name": "OpenCCman",
+          "subtitle": "便捷高效的中文轉換工具"
+        }
+      },
+      "icon": {
+        "path": "icons/openccman.png",
+        "sha256": "80ddc4bb1a4526bc7e6899c5b0df5ce2a59f19c040af7b3bb68fc32419a0e34b"
+      },
+      "source": {
+        "url": "https://github.com/gewill/OpenCCman/tree/0292acc67780156644ab6d1bc027a455a19ce05f/OpenCCman/AppIcon.icon",
+        "version": "2.1",
+        "retrievedAt": "2026-10-05",
+        "originalSHA256": "80ddc4bb1a4526bc7e6899c5b0df5ce2a59f19c040af7b3bb68fc32419a0e34b",
+        "transform": "Rendered from the layered AppIcon.icon with Icon Composer 27.0 (129) ictool: --export-image --platform iOS --rendition Default --width 1024 --height 1024 --scale 1 --design-generation 26 (system icon shape, transparent corners); no further edits."
+      }
+    },
+    {
+      "id": "subbill",
+      "appStoreID": "1561803236",
+      "name": "SubBill",
+      "subtitle": "Subscription Tracker",
+      "localizations": {
+        "ar": {
+          "name": "SubBill",
+          "subtitle": "تتبع الاشتراكات"
+        },
+        "da": {
+          "name": "SubBill",
+          "subtitle": "Abonnementsstyring"
+        },
+        "de": {
+          "name": "SubBill",
+          "subtitle": "Abo-Verwaltung"
+        },
+        "en": {
+          "name": "SubBill",
+          "subtitle": "Subscription Tracker"
+        },
+        "es": {
+          "name": "SubBill",
+          "subtitle": "Seguimiento de suscripción"
+        },
+        "fi": {
+          "name": "SubBill",
+          "subtitle": "Tilausten seuranta"
+        },
+        "fr": {
+          "name": "SubBill",
+          "subtitle": "Suivi des abonnements"
+        },
+        "hi": {
+          "name": "SubBill",
+          "subtitle": "सदस्यता ट्रैकर"
+        },
+        "id": {
+          "name": "SubBill",
+          "subtitle": "Subscription Tracker"
+        },
+        "it": {
+          "name": "SubBill",
+          "subtitle": "Gestione abbonamenti"
+        },
+        "ja": {
+          "name": "SubBill",
+          "subtitle": "購読管理追跡"
+        },
+        "ko": {
+          "name": "SubBill",
+          "subtitle": "구독 관리 추적"
+        },
+        "nb": {
+          "name": "SubBill",
+          "subtitle": "Abonnementsbehandling"
+        },
+        "nl": {
+          "name": "SubBill",
+          "subtitle": "Abonnementbeheer"
+        },
+        "pl": {
+          "name": "SubBill",
+          "subtitle": "Śledzenie subskrypcji"
+        },
+        "pt": {
+          "name": "SubBill",
+          "subtitle": "Rastreador de assinaturas"
+        },
+        "ru": {
+          "name": "SubBill",
+          "subtitle": "Управление подписками"
+        },
+        "sv": {
+          "name": "SubBill",
+          "subtitle": "Prenumerationshantering"
+        },
+        "th": {
+          "name": "SubBill",
+          "subtitle": "ติดตามการสมัคร"
+        },
+        "tr": {
+          "name": "SubBill",
+          "subtitle": "Abonelik takip"
+        },
+        "zh-Hans": {
+          "name": "SubBill",
+          "subtitle": "订阅管理追踪"
+        },
+        "zh-Hant": {
+          "name": "SubBill",
+          "subtitle": "訂閱管理追蹤"
+        }
+      },
+      "icon": {
+        "path": "icons/subbill.png",
+        "sha256": "6d9efd0e78e8c8e5c388ea86ab0a0f00bc38dcbabf0a721ed91ea26774f08af6"
+      },
+      "source": {
+        "url": "https://github.com/gewill/SubBill/blob/67bc047320192631e2e15487340f0003bbafbe68/SubBill/Assets.xcassets/AppIcon.appiconset/1024.png",
+        "version": "2.0",
+        "retrievedAt": "2026-10-05",
+        "originalSHA256": "6d9efd0e78e8c8e5c388ea86ab0a0f00bc38dcbabf0a721ed91ea26774f08af6",
+        "transform": "Original 1024x1024 PNG from the AppIcon.appiconset shipped in v2.0; no resizing, cropping, or system mask. The asset itself has black corners outside its rounded rectangle."
+      }
+    },
+    {
+      "id": "relationship",
+      "appStoreID": "1665455216",
+      "name": "Relationship",
+      "subtitle": "Find the relationship. Know the right name.",
+      "localizations": {
+        "ar": {
+          "name": "Relationship",
+          "subtitle": "اعرف صلة القرابة. اعرف اللقب الصحيح."
+        },
+        "da": {
+          "name": "Relationship",
+          "subtitle": "Find slægtskabet. Kend det rette navn."
+        },
+        "de": {
+          "name": "Relationship",
+          "subtitle": "Verwandtschaft finden. Die richtige Anrede kennen."
+        },
+        "en": {
+          "name": "Relationship",
+          "subtitle": "Find the relationship. Know the right name."
+        },
+        "es": {
+          "name": "Relationship",
+          "subtitle": "Descubre el parentesco. Conoce el trato correcto."
+        },
+        "fi": {
+          "name": "Relationship",
+          "subtitle": "Selvitä sukulaisuus. Tiedä oikea nimitys."
+        },
+        "fr": {
+          "name": "Relationship",
+          "subtitle": "Trouvez le lien de parenté. Connaissez le bon terme."
+        },
+        "hi": {
+          "name": "Relationship",
+          "subtitle": "रिश्ता पहचानें। सही संबोधन जानें।"
+        },
+        "id": {
+          "name": "Relationship",
+          "subtitle": "Temukan hubungan kekerabatan. Ketahui sebutan yang tepat."
+        },
+        "it": {
+          "name": "Relationship",
+          "subtitle": "Trova il grado di parentela. Scopri come chiamarlo."
+        },
+        "ja": {
+          "name": "Relationship",
+          "subtitle": "親族関係を調べて、正しい呼び方を知る。"
+        },
+        "ko": {
+          "name": "Relationship",
+          "subtitle": "관계를 찾고, 알맞은 호칭을 알아보세요."
+        },
+        "nb": {
+          "name": "Relationship",
+          "subtitle": "Finn slektskapet. Kjenn det riktige navnet."
+        },
+        "nl": {
+          "name": "Relationship",
+          "subtitle": "Vind de verwantschap. Ken de juiste aanspreekvorm."
+        },
+        "pl": {
+          "name": "Relationship",
+          "subtitle": "Ustal pokrewieństwo. Poznaj właściwe określenie."
+        },
+        "pt": {
+          "name": "Relationship",
+          "subtitle": "Descubra o parentesco. Conheça o tratamento certo."
+        },
+        "ru": {
+          "name": "Relationship",
+          "subtitle": "Найдите родство. Узнайте верное обращение."
+        },
+        "sv": {
+          "name": "Relationship",
+          "subtitle": "Hitta släktskapet. Lär dig rätt benämning."
+        },
+        "th": {
+          "name": "Relationship",
+          "subtitle": "ค้นหาความสัมพันธ์ รู้จักคำเรียกที่ถูกต้อง"
+        },
+        "tr": {
+          "name": "Relationship",
+          "subtitle": "Akrabalığı bul. Doğru hitabı öğren."
+        },
+        "zh-Hans": {
+          "name": "亲戚关系计算器",
+          "subtitle": "理清关系，叫对称呼。"
+        },
+        "zh-Hant": {
+          "name": "親戚關係計算器",
+          "subtitle": "理清關係，叫對稱呼。"
+        }
+      },
+      "icon": {
+        "path": "icons/relationship.png",
+        "sha256": "04e205cffc7eeb675423e74661a71e2b9ba7c1fe5e7e9593e6dbe3a0f1fa800b"
+      },
+      "source": {
+        "url": "https://github.com/gewill/Relationship-SwiftUI/blob/1d81d7d48e34ba59dc1de9f7bc5cbab399980460/Relationship/Assets.xcassets/AppIcon.appiconset/iOS-1024%401x.png",
+        "version": "1.1.4",
+        "retrievedAt": "2026-10-05",
+        "originalSHA256": "04e205cffc7eeb675423e74661a71e2b9ba7c1fe5e7e9593e6dbe3a0f1fa800b",
+        "transform": "Original 1024x1024 PNG from the AppIcon.appiconset, unchanged since 2023-01-20; no resizing, cropping, or system mask."
+      }
     }
   ]
 }

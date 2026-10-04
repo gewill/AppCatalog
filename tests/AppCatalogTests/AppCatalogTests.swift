@@ -10,7 +10,7 @@ final class AppCatalogTests: XCTestCase {
         XCTAssertEqual(try catalog.select([]), [])
         XCTAssertThrowsError(try catalog.select(["missing"]))
         XCTAssertThrowsError(try catalog.select(["clickman", "clickman"]))
-        XCTAssertEqual(catalog.apps.count, 3)
+        XCTAssertEqual(catalog.apps.count, 8)
     }
 
     func testAttributionIsEncodedWithoutAddingQueryParameters() throws {
